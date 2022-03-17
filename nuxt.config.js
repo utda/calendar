@@ -4,6 +4,7 @@ const siteDesc = 'カレンダー形式の可視化を行います。'
 const shortName = 'カレンダー'
 const siteKeywords = ['IIIF', 'デジタルアーカイブ'].join(', ')
 const gtag = ''
+const baseUrl = ''
 
 // `DEPLOY_ENV` が `GH_PAGES` の場合のみ `router.base = '/<repository-name>/'` を追加する
 const routerBase =
@@ -119,7 +120,7 @@ export default {
 
   sitemap: {
     path: '/sitemap.xml',
-    // hostname: baseUrl,
+    hostname: baseUrl,
   },
 
   i18n: {
