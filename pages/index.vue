@@ -73,9 +73,42 @@
     </template>
     <template v-else>
       <v-container>
-        <p>使用方法については、以下のページをご確認ください。</p>
-        <p>Please refer to the following page for usage instructions.</p>
-        <a :href="github">{{ github }}</a>
+        <div>
+          使用方法については、以下のページをご確認ください。 / Please refer to
+          the following page for usage instructions.
+        </div>
+        <div class="mt-5">
+          <a :href="github">{{ github }}</a>
+        </div>
+        <div class="mt-10">
+          JSONファイルのURLを入力してください。 / Enter the URL of the JSON
+          file.
+        </div>
+        <div class="mt-5">
+          <v-text-field
+            v-model="json_url"
+            rounded
+            filled
+            hide-details
+            dense
+            :placeholder="`http...`"
+            @keyup.enter="add"
+          ></v-text-field>
+          <div class="mt-5">
+            <v-btn class="ma-1" rounded depressed color="primary" @click="add">
+              {{ $t('add') }}</v-btn
+            >
+            <v-btn
+              class="ma-1"
+              rounded
+              depressed
+              color="success"
+              @click="json_url = sample_url"
+            >
+              {{ $t('example') }}</v-btn
+            >
+          </div>
+        </div>
       </v-container>
     </template>
   </div>
@@ -88,7 +121,9 @@ import SearchForm from '~/components/SearchForm'
 
 function toWareki(y) {
   let s = ''
-  if (y > 1988) {
+  if (y > 2018) {
+    s = '令和' + (y - 2018)
+  } else if (y > 1988) {
     s = '平成' + (y - 1988)
   } else if (y > 1925) {
     s = '昭和' + (y - 1925)
@@ -109,6 +144,9 @@ export default {
   },
   data() {
     return {
+      json_url: '',
+      sample_url:
+        'https://gist.githubusercontent.com/nakamura196/2d9f184ea48fc28af274804e2deebe06/raw/6877796163b4bcd7ad268546410c5e69e2d71ea0/calendar.json',
       github: 'https://github.com/ldasjp8/calendar',
       return_url: null,
       return_label: null,
@@ -127,91 +165,103 @@ export default {
   },
   watch: {
     $route() {
-      this.search()
+      if (this.u !== this.$route.query.u) {
+        this.init()
+      } else {
+        this.search()
+      }
     },
   },
   created() {
-    const param = Object.assign({}, this.$route.query)
-
-    if (!param.u) {
-      // vueからnuxtへの移行
-      const hash = this.$route.hash
-      if (hash) {
-        const u = hash.split('?u=')[1].replace(':/', '://')
-        location.href = this.localePath({
-          name: 'index',
-          query: {
-            u,
-          },
-        })
-      }
-      return
-    }
-    this.u = param.u
-
-    if (param.param) {
-      const query = JSON.parse(param.param)
-
-      this.q = query.q ? query.q : this.q
-      this.collections = query.collections
-        ? query.collections
-        : this.collections
-    }
-
-    this.$axios.$get(this.u).then((response) => {
-      const result = response
-
-      this.header = result.header
-      this.footer = result.footer
-      this.return_url = result.return_url
-      this.return_label = result.return_label
-
-      this.description = result.description
-      this.search_place_holder = result.search_place_holder
-
-      const data = result.data
-      this.data_all = data
-
-      const index = {
-        fulltext: {},
-      }
-
-      for (let i = 0; i < data.length; i++) {
-        const obj = data[i]
-        let fulltext = ''
-
-        for (const key in obj) {
-          if (!index[key]) {
-            index[key] = {}
-          }
-          let values = obj[key]
-          if (!(values instanceof Array)) {
-            values = [values]
-          }
-          for (let j = 0; j < values.length; j++) {
-            const value = values[j]
-
-            // URIの場合は無視
-            if (value.startsWith('http')) {
-              continue
-            }
-
-            fulltext += value + ' '
-            if (!index[key][value]) {
-              index[key][value] = []
-            }
-            index[key][value].push(i)
-          }
-        }
-        index.fulltext[fulltext] = [i]
-      }
-
-      this.index = index
-
-      this.search()
-    })
+    this.init()
   },
   methods: {
+    init() {
+      const param = Object.assign({}, this.$route.query)
+
+      if (!param.u) {
+        // vueからnuxtへの移行
+        const hash = this.$route.hash
+        if (hash) {
+          const u = hash.split('?u=')[1].replace(':/', '://')
+
+          this.$router.push(
+            this.localePath({
+              name: 'index',
+              query: {
+                u,
+              },
+            })
+          )
+
+          // this.u = u
+        }
+        return
+      }
+      this.u = param.u
+
+      if (param.param) {
+        const query = JSON.parse(param.param)
+
+        this.q = query.q ? query.q : this.q
+        this.collections = query.collections
+          ? query.collections
+          : this.collections
+      }
+
+      this.$axios.$get(this.u).then((response) => {
+        const result = response
+
+        this.header = result.header
+        this.footer = result.footer
+        this.return_url = result.return_url
+        this.return_label = result.return_label
+
+        this.description = result.description
+        this.search_place_holder = result.search_place_holder
+
+        const data = result.data
+        this.data_all = data
+
+        const index = {
+          fulltext: {},
+        }
+
+        for (let i = 0; i < data.length; i++) {
+          const obj = data[i]
+          let fulltext = ''
+
+          for (const key in obj) {
+            if (!index[key]) {
+              index[key] = {}
+            }
+            let values = obj[key]
+            if (!(values instanceof Array)) {
+              values = [values]
+            }
+            for (let j = 0; j < values.length; j++) {
+              const value = values[j]
+
+              // URIの場合は無視
+              if (value.startsWith('http')) {
+                continue
+              }
+
+              fulltext += value + ' '
+              if (!index[key][value]) {
+                index[key][value] = []
+              }
+              index[key][value].push(i)
+            }
+          }
+          index.fulltext[fulltext] = [i]
+        }
+
+        this.index = index
+
+        this.search()
+      })
+    },
     search() {
       const data = this.filter()
 
@@ -337,6 +387,14 @@ export default {
         ]
         return monthEnglishList[index - 1]
       }
+    },
+    add() {
+      this.$router.push(
+        this.localePath({
+          name: 'index',
+          query: { u: this.json_url },
+        })
+      )
     },
   },
 }

@@ -8,7 +8,7 @@
               v-model="q_"
               rounded
               filled
-              :label="$t('date') || search_place_holder"
+              :label="search_place_holder || $t('date')"
               name="q"
               hide-details
               dense

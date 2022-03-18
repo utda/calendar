@@ -5,7 +5,7 @@
         <nuxt-link
           style="color: inherit"
           :to="localePath({ name: 'index', query: { u: u } })"
-          >{{ 'カレンダー検索' || header }}</nuxt-link
+          >{{ header || $t('calendar_search') }}</nuxt-link
         ></v-toolbar-title
       >
       <v-spacer></v-spacer>
@@ -19,7 +19,7 @@
         >
         <v-btn text target="_blank" :href="url">
           {{ label }}
-          <i class="ml-1 fas fa-external-link-alt"></i>
+          <v-icon>mdi-exit-to-app</v-icon>
         </v-btn>
         <template v-if="$i18n.locale == 'ja'">
           <v-btn text exact :to="switchLocalePath('en')">English</v-btn>

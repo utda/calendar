@@ -9,5 +9,8 @@
   "open_facets": "検索フォームを開く",
   "search_result": "検索結果数",
   "or": "または",
-  "date": "年月"
+  "date": "年月",
+  "add": "追加",
+  "example": "例",
+  "calendar_search": "カレンダー検索"
 }

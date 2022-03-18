@@ -9,5 +9,8 @@
   "open_facets": "Open search form",
   "search_result": "Search Result",
   "or": "OR",
-  "date": "Date"
+  "date": "Date",
+  "add": "Add",
+  "example": "Example",
+  "calendar_search": "Calendar Search"
 }
