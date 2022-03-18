@@ -2,13 +2,11 @@
   <div>
     <Header
       :header="header"
-      :url="return_url"
-      :label="return_label"
+      :links="links"
       :u="u"
       :description="description"
       :top="false"
     />
-
     <v-container class="mt-5">
       <v-tooltip bottom>
         <template #activator="{ on }">
@@ -116,8 +114,20 @@
                     <v-icon color="primary">mdi-exit-to-app</v-icon>
                   </a>
 
-                  <div v-if="selectedEvent.description" class="mt-5">
-                    {{ selectedEvent.description }}
+                  <div v-if="selectedEvent.metadata" class="mt-5">
+                    <v-simple-table dense>
+                      <template #default>
+                        <tbody>
+                          <tr
+                            v-for="item in selectedEvent.metadata"
+                            :key="item.name"
+                          >
+                            <th>{{ item.label }}</th>
+                            <td>{{ $utils.toString(item.value) }}</td>
+                          </tr>
+                        </tbody>
+                      </template>
+                    </v-simple-table>
                   </div>
                 </v-card-text>
               </v-card>
@@ -145,8 +155,7 @@ export default {
   data() {
     return {
       isFacetOpen: false,
-      return_url: null,
-      return_label: null,
+      links: [],
       header: null,
       footer: null,
       items: [],
@@ -226,16 +235,10 @@ export default {
   mounted() {
     this.$refs.calendar.checkChange()
   },
-  created() {
+  async created() {
     const param = Object.assign({}, this.$route.query)
 
-    this.u = param.u ? param.u : this.u
-
-    this.focus = param.date ? param.date + '-01' : '2020-01-01'
-    const focusArr = this.focus.split('-')
-    this.yearAndMonth = focusArr[0] + '-' + focusArr[1]
-
-    if (param.param) {
+    if (param.params) {
       const query = JSON.parse(param.param)
 
       this.q = query.q ? query.q : this.q
@@ -244,56 +247,31 @@ export default {
         : this.collections
     }
 
-    this.$axios.$get(this.u).then((response) => {
-      const result = response
+    //
+    const data = await this.$utils.getIndex(this.$route)
 
-      this.header = result.header
-      this.footer = result.footer
-      this.return_url = result.return_url
-      this.return_label = result.return_label
+    this.u = data.u
+    this.header = data.header
+    this.footer = data.footer
+    this.links = data.links
+    this.index = data.index
+    this.data_all = data.items
+    this.description = data.description
 
-      this.description = result.description
-      this.search_place_holder = result.search_place_holder
+    this.focus = param.date ? param.date + '-01' : '2020-01-01'
+    const focusArr = this.focus.split('-')
+    this.yearAndMonth = focusArr[0] + '-' + focusArr[1]
 
-      const data = result.data
-      this.data_all = data
-
-      const index = {
-        fulltext: {},
-      }
-
-      for (let i = 0; i < data.length; i++) {
-        const obj = data[i]
-        let fulltext = ''
-
-        for (const key in obj) {
-          if (!index[key]) {
-            index[key] = {}
-          }
-          let values = obj[key]
-          if (!(values instanceof Array)) {
-            values = [values]
-          }
-          for (let j = 0; j < values.length; j++) {
-            const value = values[j]
-            fulltext += value + ' '
-            if (!index[key][value]) {
-              index[key][value] = []
-            }
-            index[key][value].push(i)
-          }
-        }
-        index.fulltext[fulltext] = [i]
-      }
-
-      this.index = index
-
-      this.search()
-    })
+    this.search()
   },
   methods: {
     search() {
-      const data = this.filter()
+      const data = this.$utils.filter(
+        this.index,
+        this.collections,
+        this.q,
+        this.data_all
+      )
 
       const events = []
 
@@ -304,56 +282,12 @@ export default {
           start: obj.date,
           end: obj.date,
           url: obj.url,
-          description: obj.description,
+          metadata: obj.metadata,
           thumbnail: obj.thumbnail,
         })
       }
 
       this.events = events
-    },
-    filter() {
-      const index = this.index
-
-      let collectionIndex = []
-      let fulltextIndex = []
-
-      const collections = this.collections
-
-      if (collections.length === 0) {
-        for (const key in index.collections) {
-          collectionIndex = collectionIndex.concat(index.collections[key])
-        }
-      } else {
-        for (let i = 0; i < collections.length; i++) {
-          const collection = collections[i]
-          const indexArr = index.collections[collection]
-          collectionIndex = collectionIndex.concat(indexArr)
-        }
-      }
-
-      const q = this.q
-      if (!q) {
-        for (const key in index.fulltext) {
-          fulltextIndex = fulltextIndex.concat(index.fulltext[key])
-        }
-      } else {
-        for (const key in index.fulltext) {
-          if (key.includes(q)) {
-            fulltextIndex = fulltextIndex.concat(index.fulltext[key])
-          }
-        }
-      }
-
-      const x = new Set(collectionIndex)
-      const y = new Set(fulltextIndex)
-      const intersection = new Set([...x].filter((e) => y.has(e))) // 2, 3
-
-      const data = []
-      for (const value of intersection) {
-        data.push(this.data_all[value])
-      }
-
-      return data
     },
     viewDay({ date }) {
       this.focus = date

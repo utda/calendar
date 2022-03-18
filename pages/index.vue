@@ -2,8 +2,7 @@
   <div>
     <Header
       :header="header"
-      :url="return_url"
-      :label="return_label"
+      :links="links"
       :u="u"
       :description="description"
       :top="true"
@@ -18,7 +17,6 @@
             index.collections ? Object.keys(index.collections) : []
           "
           :u="u"
-          :search_place_holder="search_place_holder"
         />
       </v-container>
 
@@ -145,11 +143,9 @@ export default {
   data() {
     return {
       json_url: '',
-      sample_url:
-        'https://gist.githubusercontent.com/nakamura196/2d9f184ea48fc28af274804e2deebe06/raw/6877796163b4bcd7ad268546410c5e69e2d71ea0/calendar.json',
+      sample_url: 'https://nakamura196.github.io/json/calendar.json',
       github: 'https://github.com/ldasjp8/calendar',
-      return_url: null,
-      return_label: null,
+      links: [],
       header: null,
       footer: null,
       items: [],
@@ -157,7 +153,6 @@ export default {
       q: '',
       u: null,
       description: '',
-      search_place_holder: '',
       index: {},
       collections: [],
       total: 0,
@@ -176,31 +171,10 @@ export default {
     this.init()
   },
   methods: {
-    init() {
+    async init() {
       const param = Object.assign({}, this.$route.query)
 
-      if (!param.u) {
-        // vueからnuxtへの移行
-        const hash = this.$route.hash
-        if (hash) {
-          const u = hash.split('?u=')[1].replace(':/', '://')
-
-          this.$router.push(
-            this.localePath({
-              name: 'index',
-              query: {
-                u,
-              },
-            })
-          )
-
-          // this.u = u
-        }
-        return
-      }
-      this.u = param.u
-
-      if (param.param) {
+      if (param.params) {
         const query = JSON.parse(param.param)
 
         this.q = query.q ? query.q : this.q
@@ -209,58 +183,29 @@ export default {
           : this.collections
       }
 
-      this.$axios.$get(this.u).then((response) => {
-        const result = response
+      //
+      const data = await this.$utils.getIndex(this.$route)
 
-        this.header = result.header
-        this.footer = result.footer
-        this.return_url = result.return_url
-        this.return_label = result.return_label
+      if (data.redirect) {
+        this.$router.push(
+          this.localePath({
+            name: 'index',
+            query: {
+              u: data.u,
+            },
+          })
+        )
+      }
 
-        this.description = result.description
-        this.search_place_holder = result.search_place_holder
+      this.u = data.u
+      this.header = data.header
+      this.footer = data.footer
+      this.links = data.links
+      this.index = data.index
+      this.data_all = data.items
+      this.description = data.description
 
-        const data = result.data
-        this.data_all = data
-
-        const index = {
-          fulltext: {},
-        }
-
-        for (let i = 0; i < data.length; i++) {
-          const obj = data[i]
-          let fulltext = ''
-
-          for (const key in obj) {
-            if (!index[key]) {
-              index[key] = {}
-            }
-            let values = obj[key]
-            if (!(values instanceof Array)) {
-              values = [values]
-            }
-            for (let j = 0; j < values.length; j++) {
-              const value = values[j]
-
-              // URIの場合は無視
-              if (value.startsWith('http')) {
-                continue
-              }
-
-              fulltext += value + ' '
-              if (!index[key][value]) {
-                index[key][value] = []
-              }
-              index[key][value].push(i)
-            }
-          }
-          index.fulltext[fulltext] = [i]
-        }
-
-        this.index = index
-
-        this.search()
-      })
+      this.search()
     },
     search() {
       const data = this.filter()
