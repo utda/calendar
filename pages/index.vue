@@ -174,7 +174,7 @@ export default {
     async init() {
       const param = Object.assign({}, this.$route.query)
 
-      if (param.params) {
+      if (param.param) {
         const query = JSON.parse(param.param)
 
         this.q = query.q ? query.q : this.q
@@ -208,7 +208,12 @@ export default {
       this.search()
     },
     search() {
-      const data = this.filter()
+      const data = this.$utils.filter(
+        this.index,
+        this.collections,
+        this.q,
+        this.data_all
+      )
 
       this.total = data.length
 
@@ -268,50 +273,7 @@ export default {
         items.push(obj)
       }
     },
-    filter() {
-      const index = this.index
 
-      let collectionIndex = []
-      let fulltextIndex = []
-
-      const collections = this.collections
-
-      if (collections.length === 0) {
-        for (const key in index.collections) {
-          collectionIndex = collectionIndex.concat(index.collections[key])
-        }
-      } else {
-        for (let i = 0; i < collections.length; i++) {
-          const collection = collections[i]
-          const indexArr = index.collections[collection]
-          collectionIndex = collectionIndex.concat(indexArr)
-        }
-      }
-
-      const q = this.q
-      if (!q) {
-        for (const key in index.fulltext) {
-          fulltextIndex = fulltextIndex.concat(index.fulltext[key])
-        }
-      } else {
-        for (const key in index.fulltext) {
-          if (key.includes(q)) {
-            fulltextIndex = fulltextIndex.concat(index.fulltext[key])
-          }
-        }
-      }
-
-      const x = new Set(collectionIndex)
-      const y = new Set(fulltextIndex)
-      const intersection = new Set([...x].filter((e) => y.has(e))) // 2, 3
-
-      const data = []
-      for (const value of intersection) {
-        data.push(this.data_all[value])
-      }
-
-      return data
-    },
     getMonthName(index) {
       if (this.$i18n.locale === 'ja') {
         return index + '月'

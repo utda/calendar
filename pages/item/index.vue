@@ -238,7 +238,7 @@ export default {
   async created() {
     const param = Object.assign({}, this.$route.query)
 
-    if (param.params) {
+    if (param.param) {
       const query = JSON.parse(param.param)
 
       this.q = query.q ? query.q : this.q
