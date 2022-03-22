@@ -1,14 +1,16 @@
 <template>
   <div>
     <Header
-      :header="header"
-      :links="links"
-      :u="u"
-      :description="description"
+      :header="result.header"
+      :links="result.links"
+      :u="result.u"
+      :description="result.description"
       :top="false"
+      :lang-label="result.lang_label"
+      :link-label="result.link_label"
     />
     <v-container class="mt-5">
-      <v-tooltip bottom>
+      <v-tooltip v-if="false" bottom>
         <template #activator="{ on }">
           <v-btn
             fab
@@ -114,17 +116,25 @@
                     <v-icon color="primary">mdi-exit-to-app</v-icon>
                   </a>
 
+                  <div v-if="selectedEvent.description" class="my-2">
+                    {{
+                      truncate($utils.toString(selectedEvent.description), 100)
+                    }}
+                  </div>
+
                   <div v-if="selectedEvent.metadata" class="mt-5">
                     <v-simple-table dense>
                       <template #default>
                         <tbody>
-                          <tr
-                            v-for="item in selectedEvent.metadata"
-                            :key="item.name"
-                          >
-                            <th>{{ item.label }}</th>
-                            <td>{{ $utils.toString(item.value) }}</td>
-                          </tr>
+                          <template v-for="item in selectedEvent.metadata">
+                            <tr
+                              v-if="item.label !== 'description'"
+                              :key="item.name"
+                            >
+                              <th>{{ item.label }}</th>
+                              <td>{{ $utils.toString(item.value) }}</td>
+                            </tr>
+                          </template>
                         </tbody>
                       </template>
                     </v-simple-table>
@@ -137,7 +147,7 @@
       </v-row>
     </v-container>
 
-    <Footer :footer="footer" />
+    <Footer :footer="result.footer" />
   </div>
 </template>
 
@@ -155,16 +165,14 @@ export default {
   data() {
     return {
       isFacetOpen: false,
-      links: [],
-      header: null,
-      footer: null,
       items: [],
       q: null,
       u: null,
-      description: '',
       search_place_holder: '',
       index: {},
       collections: [],
+
+      result: {},
 
       type: 'month',
       events: [],
@@ -251,12 +259,10 @@ export default {
     const data = await this.$utils.getIndex(this.$route)
 
     this.u = data.u
-    this.header = data.header
-    this.footer = data.footer
-    this.links = data.links
     this.index = data.index
     this.data_all = data.items
-    this.description = data.description
+
+    this.result = data
 
     this.focus = param.date ? param.date + '-01' : '2020-01-01'
     const focusArr = this.focus.split('-')
@@ -284,6 +290,7 @@ export default {
           url: obj.url,
           metadata: obj.metadata,
           thumbnail: obj.thumbnail,
+          description: obj.description,
         })
       }
 
@@ -350,6 +357,9 @@ export default {
           },
         })
       )
+    },
+    truncate(str, len) {
+      return str.length <= len ? str : str.substr(0, len) + '...'
     },
   },
 }

@@ -1,14 +1,16 @@
 <template>
   <div>
     <Header
-      :header="header"
-      :links="links"
-      :u="u"
-      :description="description"
+      :header="result.header"
+      :links="result.links"
+      :u="result.u"
+      :description="result.description"
       :top="true"
+      :lang-label="result.lang_label"
+      :link-label="result.link_label"
     />
 
-    <template v-if="u">
+    <template v-if="result.u">
       <v-container>
         <SearchForm
           :q="q"
@@ -67,7 +69,7 @@
         </v-card>
       </v-container>
 
-      <Footer :footer="footer" />
+      <Footer :footer="result.footer" />
     </template>
     <template v-else>
       <v-container>
@@ -145,17 +147,14 @@ export default {
       json_url: '',
       sample_url: 'https://nakamura196.github.io/json/calendar.json',
       github: 'https://github.com/ldasjp8/calendar',
-      links: [],
-      header: null,
-      footer: null,
       items: [],
       data_all: [],
       q: '',
       u: null,
-      description: '',
       index: {},
       collections: [],
       total: 0,
+      result: {},
     }
   },
   watch: {
@@ -198,12 +197,9 @@ export default {
       }
 
       this.u = data.u
-      this.header = data.header
-      this.footer = data.footer
-      this.links = data.links
       this.index = data.index
       this.data_all = data.items
-      this.description = data.description
+      this.result = data
 
       this.search()
     },

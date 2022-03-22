@@ -13,5 +13,9 @@
   "add": "Add",
   "example": "Example",
   "calendar_search": "Calendar Search",
-  "links": "Link"
+  "links": "Link",
+  "analyze": "Analyze",
+  "itemsByYear": "Number of items by year",
+  "item": "Item",
+  "itemsByDay": "Number of items by day of the week"
 }

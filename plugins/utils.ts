@@ -110,6 +110,8 @@ export class Utils {
       links,
       description,
       u,
+      link_label: result.link_label,
+      lang_label: result.lang_label,
     }
   }
 

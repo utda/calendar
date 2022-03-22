@@ -10,11 +10,23 @@
       >
       <v-spacer></v-spacer>
 
-      <v-toolbar-items v-if="links && links.length > 0">
-        <v-menu offset-y>
+      <v-toolbar-items>
+        <v-btn exact text :to="localePath({ name: 'index', query: { u } })">
+          {{ $t('index') }}
+        </v-btn>
+        <v-btn exact text :to="localePath({ name: 'analyze', query: { u } })">
+          {{ $t('analyze') }}
+        </v-btn>
+
+        <v-menu v-if="links && links.length > 0" offset-y>
           <template #activator="{ on, attrs }">
             <v-btn exact text v-bind="attrs" v-on="on">
-              {{ $t('links') }}
+              <template v-if="linkLabel">
+                {{ linkLabel[$i18n.locale] }}
+              </template>
+              <template v-else>
+                {{ $t('links') }}
+              </template>
             </v-btn>
           </template>
 
@@ -32,9 +44,16 @@
 
         <v-menu offset-y>
           <template #activator="{ on }">
-            <v-btn depressed icon v-on="on">
-              <v-icon>mdi-translate</v-icon>
-            </v-btn>
+            <template v-if="langLabel">
+              <v-btn depressed text v-on="on">
+                {{ langLabel[$i18n.locale] }}
+              </v-btn>
+            </template>
+            <template v-else>
+              <v-btn depressed icon v-on="on">
+                <v-icon>mdi-translate</v-icon>
+              </v-btn>
+            </template>
           </template>
 
           <v-list>
@@ -55,7 +74,35 @@
 
 <script>
 export default {
-  props: ['header', 'links', 'u', 'description', 'top'],
-  methods: {},
+  props: {
+    header: {
+      type: String,
+      default: '',
+    },
+    links: {
+      type: Array,
+      default: () => [],
+    },
+    u: {
+      type: String,
+      default: '',
+    },
+    description: {
+      type: String,
+      default: '',
+    },
+    top: {
+      type: Boolean,
+      default: false,
+    },
+    linkLabel: {
+      type: Object,
+      default: () => null,
+    },
+    langLabel: {
+      type: Object,
+      default: () => null,
+    },
+  },
 }
 </script>
