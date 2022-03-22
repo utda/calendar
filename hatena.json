@@ -1,0 +1,1381 @@
+{
+  "description": "はてなブログの記事一覧",
+  "footer": "nakamura196",
+  "header": "デジタルアーカイブシステムの技術ブログ",
+  "items": [
+    {
+      "description": [
+        "（こちらにも同じの内容を記載しています。） 本記事では、AWS App Runnerとyolo5を用いた物体検出APIの構築例について紹介します。 Amazon ECR 以下で公開されている、Flaskを用いてyolo5モデルを公開するリポジトリについて、 https://git…"
+      ],
+      "Updated": ["2022-03-21"],
+      "collections": ["aws", "機械学習", "ECR", "AppRunner", "yolo"],
+      "date": "2022-03-21",
+      "label": "【AWS関連】Flaskを用いてyolo5モデルを公開するリポジトリのECRとAWS App Runnerでの使用方法",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-21"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "（こちらにも同じの内容を記載しています。） 本記事では、AWS App Runnerとyolo5を用いた物体検出APIの構築例について紹介します。 Amazon ECR 以下で公開されている、Flaskを用いてyolo5モデルを公開するリポジトリについて、 https://git…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/21/065453"
+    },
+    {
+      "description": [
+        "AWS App RunnerにおけるソースとしてECRを利用した際、以下のように、Health check on port \"XXXX\"が発生しました。 03-20-2022 07:18:52 AM [AppRunner] Health check on port '3000' …"
+      ],
+      "Updated": ["2022-03-20"],
+      "collections": ["aws", "AppRunner", "ECR"],
+      "date": "2022-03-20",
+      "label": "【AWS関連】AWS App Runner + ECR 利用時におけるHealth check on port \"XXXX\"の対処方法の一つ",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-20"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "AWS App RunnerにおけるソースとしてECRを利用した際、以下のように、Health check on port \"XXXX\"が発生しました。 03-20-2022 07:18:52 AM [AppRunner] Health check on port '3000' …"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/20/073831"
+    },
+    {
+      "description": [
+        "概要 データ（アイテムセット）の準備 単一コレクション（アイテムセット） 複数コレクション（アイテムセット） まとめ 概要 Omeka SのIIIF Serverモジュールは、IIIFマニフェストファイルの自動生成に加えて、IIIFコレクション（IIIFマニフェストを一つにまとめ…"
+      ],
+      "Updated": ["2022-03-17"],
+      "collections": ["IIIF", "omeka", "omeka-s-module"],
+      "date": "2022-03-17",
+      "label": "Omeka S IIIF Serverモジュールを用いたIIIFコレクションの生成",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-17"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 データ（アイテムセット）の準備 単一コレクション（アイテムセット） 複数コレクション（アイテムセット） まとめ 概要 Omeka SのIIIF Serverモジュールは、IIIFマニフェストファイルの自動生成に加えて、IIIFコレクション（IIIFマニフェストを一つにまとめ…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/17/224035"
+    },
+    {
+      "description": [
+        "本記事では、Awesome IIIFで紹介されている、AWSサーバーレスアプリケーションによるIIIF Image Serverの構築方法を紹介します。 github.com なお、本記事の手続きにより、AWSのサービス利用料金が発生しますので、試される場合にはご注意ください。 …"
+      ],
+      "Updated": ["2022-03-17"],
+      "collections": ["aws", "IIIF"],
+      "date": "2022-03-17",
+      "label": "AWSサーバーレスアプリケーションによるIIIF Image Serverの構築",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-17"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "本記事では、Awesome IIIFで紹介されている、AWSサーバーレスアプリケーションによるIIIF Image Serverの構築方法を紹介します。 github.com なお、本記事の手続きにより、AWSのサービス利用料金が発生しますので、試される場合にはご注意ください。 …"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/17/073223"
+    },
+    {
+      "description": [
+        "Bootstrap 5を用いたOmeka Sテーマを公開しました。 github.com 以下、開発者向けの情報を含む、使用方法について説明します。 テーマの設定画面において、以下の設定が可能です。 上記の設定内容から、一部を取り上げて説明します。 Footer Content …"
+      ],
+      "Updated": ["2022-03-14"],
+      "collections": [
+        "omeka",
+        "omeka-s",
+        "omeka-s-theme",
+        "Omeka S テーマ Bootstrap5"
+      ],
+      "date": "2022-03-14",
+      "label": "【テーマ開発】Bootstrap 5を用いたOmeka Sテーマを公開しました。",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-14"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Bootstrap 5を用いたOmeka Sテーマを公開しました。 github.com 以下、開発者向けの情報を含む、使用方法について説明します。 テーマの設定画面において、以下の設定が可能です。 上記の設定内容から、一部を取り上げて説明します。 Footer Content …"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/14/073303"
+    },
+    {
+      "description": [
+        "本記事では、AWS x Nuxt.js x Elasticsearchを用いた検索アプリケーションの開発環境の構築について、説明します。備忘録の側面が強いです。 以下の構成を目指します。よりよい構成や構築方法があるかと思いますが、とりあえずAWSを用いて、検索エンジンにElast…"
+      ],
+      "Updated": ["2022-03-12"],
+      "collections": ["nuxt", "elasticsearch", "aws"],
+      "date": "2022-03-12",
+      "label": "【開発者向け】AWS x Nuxt.js x Elasticsearchを用いた検索アプリケーションの開発環境の構築",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-12"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "本記事では、AWS x Nuxt.js x Elasticsearchを用いた検索アプリケーションの開発環境の構築について、説明します。備忘録の側面が強いです。 以下の構成を目指します。よりよい構成や構築方法があるかと思いますが、とりあえずAWSを用いて、検索エンジンにElast…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/12/235301"
+    },
+    {
+      "description": [
+        "Bulk Importによる一括登録および更新の方法について、以下の記事を作成しました。 nakamura196.hatenablog.com nakamura196.hatenablog.com 上記において、リソースクラスの登録方法を示していなかったため、本記事で追記します。…"
+      ],
+      "Updated": ["2022-03-11"],
+      "collections": ["omeka-s", "omeka-s-module", "omeka"],
+      "date": "2022-03-11",
+      "label": "Bulk Importによるリソースクラスの登録方法・設定編集ほか",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-11"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Bulk Importによる一括登録および更新の方法について、以下の記事を作成しました。 nakamura196.hatenablog.com nakamura196.hatenablog.com 上記において、リソースクラスの登録方法を示していなかったため、本記事で追記します。…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/11/120649"
+    },
+    {
+      "description": [
+        "Google Drive内のファイルオーナーの一括更新プログラムを作成しました。 以下、権限を移譲する人と移譲される人に分けて説明します。 オーナー権限を移譲する人 オーナー権限が移譲される人 まとめ なお、このプログラムでは、PDFや画像ファイルの権限移譲はできませんので、ご注…"
+      ],
+      "Updated": ["2022-03-11"],
+      "collections": ["Google Apps Script"],
+      "date": "2022-03-11",
+      "label": "Google Drive内のファイルオーナーの一括更新プログラムを作成しました。",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-11"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Google Drive内のファイルオーナーの一括更新プログラムを作成しました。 以下、権限を移譲する人と移譲される人に分けて説明します。 オーナー権限を移譲する人 オーナー権限が移譲される人 まとめ なお、このプログラムでは、PDFや画像ファイルの権限移譲はできませんので、ご注…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/11/120636"
+    },
+    {
+      "description": [
+        "背景 くずし字のデータセットを利用していた際、データの処理操作を誤り、以下のようにUnicode名を持つフォルダをマイドライブの直下に大量に作成してしまいました。 この課題に対して、本記事では、Googleドライブ上の複数のフォルダを一括削除するプログラムについて説明します。 な…"
+      ],
+      "Updated": ["2022-03-09"],
+      "collections": ["Colaboratory"],
+      "date": "2022-03-09",
+      "label": "【備忘録】Googleドライブ上のフォルダ一括削除プログラム（例）を作成しました。",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-09"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "背景 くずし字のデータセットを利用していた際、データの処理操作を誤り、以下のようにUnicode名を持つフォルダをマイドライブの直下に大量に作成してしまいました。 この課題に対して、本記事では、Googleドライブ上の複数のフォルダを一括削除するプログラムについて説明します。 な…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/09/215301"
+    },
+    {
+      "description": [
+        "Omeka Sモジュールのインストール方法についてまとめます。 A. 公式サイトから B. GitHub or GitLab（その1：リリース版のダウンロード）から C. GitHub or GitLab（その2：ソースコード）から まとめ A. 公式サイトから まず、以下の公式…"
+      ],
+      "Updated": ["2022-03-09"],
+      "collections": ["omeka-s", "omeka-s-module", "omeka"],
+      "date": "2022-03-09",
+      "label": "Omeka Sモジュールのインストール方法",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-09"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Omeka Sモジュールのインストール方法についてまとめます。 A. 公式サイトから B. GitHub or GitLab（その1：リリース版のダウンロード）から C. GitHub or GitLab（その2：ソースコード）から まとめ A. 公式サイトから まず、以下の公式…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/09/175624"
+    },
+    {
+      "description": [
+        "はじめに 進め方 1. Create new resources 2. Append data to resources 3. Revise data of resources 4. Update data of resources 5. Replace all data of …"
+      ],
+      "Updated": ["2022-03-08"],
+      "collections": ["omeka-s", "omeka-s-module", "omeka"],
+      "date": "2022-03-08",
+      "label": "Bulk ImportによるCSVファイルを用いたメタデータの一括更新",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-08"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "はじめに 進め方 1. Create new resources 2. Append data to resources 3. Revise data of resources 4. Update data of resources 5. Replace all data of …"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/08/233610"
+    },
+    {
+      "description": [
+        "事象 Omeka Sは全文検索機能を提供していますが、残念ながら、デフォルトの設定では日本語検索がうまく機能しません。具体的には、部分一致検索がうまく機能しません。 例えば、以下のように「校異」という文字列がタイトルに含まれるアイテムが複数登録されている場合を想定します。 この時…"
+      ],
+      "Updated": ["2022-03-07"],
+      "collections": ["omeka-s", "omeka-s-theme", "omeka-s-module", "omeka"],
+      "date": "2022-03-07",
+      "label": "Omeka Sの日本語による全文検索の注意点とMroonga searchモジュール",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-07"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "事象 Omeka Sは全文検索機能を提供していますが、残念ながら、デフォルトの設定では日本語検索がうまく機能しません。具体的には、部分一致検索がうまく機能しません。 例えば、以下のように「校異」という文字列がタイトルに含まれるアイテムが複数登録されている場合を想定します。 この時…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/07/083004"
+    },
+    {
+      "description": [
+        "Pythonを用いたTEI/XMLファイルの分析サンプルプログラムを作成しました。 以下のGoogle Colabからご利用いただけます。 https://colab.research.google.com/drive/1fji80KZW8typjJMi01fyUWjrdYrNl…"
+      ],
+      "Updated": ["2022-03-06"],
+      "collections": ["TEI"],
+      "date": "2022-03-06",
+      "label": "Pythonを用いたTEI/XMLファイルの分析サンプルプログラムを作成しました。",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-06"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Pythonを用いたTEI/XMLファイルの分析サンプルプログラムを作成しました。 以下のGoogle Colabからご利用いただけます。 https://colab.research.google.com/drive/1fji80KZW8typjJMi01fyUWjrdYrNl…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/06/133459"
+    },
+    {
+      "description": [
+        "IIIFマニフェストファイルからの画像一括ダウンロードプログラムを作成しました。 以下のGoogle Colabからご利用いただけます。 https://colab.research.google.com/drive/1XL6cnY6fdtYTB5EdNA_B_EfqKHXZMD…"
+      ],
+      "Updated": ["2022-03-04"],
+      "collections": ["IIIF"],
+      "date": "2022-03-04",
+      "label": " IIIFマニフェストファイルからの画像一括ダウンロードプログラムを作成しました。",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-04"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "IIIFマニフェストファイルからの画像一括ダウンロードプログラムを作成しました。 以下のGoogle Colabからご利用いただけます。 https://colab.research.google.com/drive/1XL6cnY6fdtYTB5EdNA_B_EfqKHXZMD…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/04/222946"
+    },
+    {
+      "description": [
+        "概要 本記事では、Omeka S IIIF Serverモジュールにおいて、外部のImage Serverを利用する方法について説明します。 以下、本記事で使用する用語の整理です。 IIIF Image API: https://iiif.io/api/image/3.0/ II…"
+      ],
+      "Updated": ["2022-03-04"],
+      "collections": ["IIIF", "omeka-s", "omeka-s-module", "omeka"],
+      "date": "2022-03-04",
+      "label": "Omeka S IIIF Serverモジュールにおいて、外部のImage Serverを利用する方法",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-04"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 本記事では、Omeka S IIIF Serverモジュールにおいて、外部のImage Serverを利用する方法について説明します。 以下、本記事で使用する用語の整理です。 IIIF Image API: https://iiif.io/api/image/3.0/ II…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/04/212102"
+    },
+    {
+      "description": [
+        "※ 本モジュールの使用にあたっては、一部発展的な手続きが必要となります。Omeka Sの基本的な使用を検討されている方は、その点ご注意ください。 概要 Omeka SでXMLファイルの表示を可能とするXML Viewerモジュールの使い方について説明します。TEIで作成したXML…"
+      ],
+      "Updated": ["2022-03-04"],
+      "collections": ["omeka-s", "omeka-s-module", "TEI", "omeka"],
+      "date": "2022-03-04",
+      "label": "Omeka S XML Viewerモジュールの使い方",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-04"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "※ 本モジュールの使用にあたっては、一部発展的な手続きが必要となります。Omeka Sの基本的な使用を検討されている方は、その点ご注意ください。 概要 Omeka SでXMLファイルの表示を可能とするXML Viewerモジュールの使い方について説明します。TEIで作成したXML…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/04/092842"
+    },
+    {
+      "description": [
+        "デジタルアーカイブシステムの技術に関するブログです。特に、OmekaやIIIF、TEIなどに関する記事を執筆します。 Omekaの使い方に関する情報は、以下の記事にまとめています。 Omeka Sに関する記事まとめ - デジタルアーカイブシステムの技術ブログ カテゴリ「IIIF」…"
+      ],
+      "Updated": ["2022-03-04"],
+      "date": "2022-03-04",
+      "label": "【固定した記事】デジタルアーカイブシステムの技術ブログへようこそ",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-04"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "デジタルアーカイブシステムの技術に関するブログです。特に、OmekaやIIIF、TEIなどに関する記事を執筆します。 Omekaの使い方に関する情報は、以下の記事にまとめています。 Omeka Sに関する記事まとめ - デジタルアーカイブシステムの技術ブログ カテゴリ「IIIF」…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/04/093550"
+    },
+    {
+      "description": [
+        "概要 Omeka SにMiradorビューアを追加するモジュールについて紹介します。 GitHubリポジトリは以下です。 github.com Mirador2と3の両方が利用可能です。また、各種プラグインを設定画面から追加することができます。この記事では、画像の回転や左右反転を…"
+      ],
+      "Updated": ["2022-03-01"],
+      "collections": ["IIIF", "mirador", "omeka-s", "omeka-s-module", "omeka"],
+      "date": "2022-03-01",
+      "label": "Omeka S Mirador モジュールの使い方",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-01"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 Omeka SにMiradorビューアを追加するモジュールについて紹介します。 GitHubリポジトリは以下です。 github.com Mirador2と3の両方が利用可能です。また、各種プラグインを設定画面から追加することができます。この記事では、画像の回転や左右反転を…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/01/122006"
+    },
+    {
+      "description": [
+        "Omeka Sに関する記事をまとめます。（随時更新） 利用者向け サイト リソース 管理 モジュール 識別子 地図 IIIF関連 一括登録 エクスポート 検索 語彙 TEI/XML テーマ 開発者向け 利用者向け Omeka Sの導入方法およびモジュールの追加方法 サイト アイテ…"
+      ],
+      "Updated": ["2022-03-01"],
+      "collections": ["omeka-s", "omeka-s-module", "omeka"],
+      "date": "2022-03-01",
+      "label": "Omeka Sに関する記事まとめ",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-03-01"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Omeka Sに関する記事をまとめます。（随時更新） 利用者向け サイト リソース 管理 モジュール 識別子 地図 IIIF関連 一括登録 エクスポート 検索 語彙 TEI/XML テーマ 開発者向け 利用者向け Omeka Sの導入方法およびモジュールの追加方法 サイト アイテ…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/03/01/121931"
+    },
+    {
+      "description": [
+        "Google Drive専用ダウンローダであるgdownについて、以下のエラーが頻発するようになりました。 Access denied with the following error: Cannot retrieve the public link of the file. Y…"
+      ],
+      "Updated": ["2022-02-22"],
+      "date": "2022-02-22",
+      "label": "gdownでエラーが出た場合の対処法",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-02-22"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Google Drive専用ダウンローダであるgdownについて、以下のエラーが頻発するようになりました。 Access denied with the following error: Cannot retrieve the public link of the file. Y…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/02/22/112851"
+    },
+    {
+      "description": [
+        "IIIFマニフェストファイルからTEIのfacsimile要素を作成するプログラムを作成しました。以下のGoogle Colaboratoryでお試しいただけます。 colab.research.google.com IIIFとTEIの連携を検討されている方の参考になりましたら幸…"
+      ],
+      "Updated": ["2022-02-22"],
+      "collections": ["IIIF", "TEI"],
+      "date": "2022-02-22",
+      "label": "IIIFマニフェストファイルからTEIのfacsimile要素を作成するプログラムを作成しました。",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-02-22"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "IIIFマニフェストファイルからTEIのfacsimile要素を作成するプログラムを作成しました。以下のGoogle Colaboratoryでお試しいただけます。 colab.research.google.com IIIFとTEIの連携を検討されている方の参考になりましたら幸…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/02/22/092454"
+    },
+    {
+      "description": [
+        "Flaskを用いてyolo5モデルを公開するリポジトリ Flaskを用いてyolo5モデルを公開するにあたり、以下のリポジトリが参考になりました。 github.com 画像のアップロードフォームを含むシンプルなWebアプリと、RestAPIのサンプルなどが提供されています。 カ…"
+      ],
+      "Updated": ["2022-02-22"],
+      "collections": ["機械学習"],
+      "date": "2022-02-22",
+      "label": "Flaskを用いてyolo5モデルを公開するリポジトリの紹介とカスタムモデルのロード方法",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-02-22"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Flaskを用いてyolo5モデルを公開するリポジトリ Flaskを用いてyolo5モデルを公開するにあたり、以下のリポジトリが参考になりました。 github.com 画像のアップロードフォームを含むシンプルなWebアプリと、RestAPIのサンプルなどが提供されています。 カ…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/02/22/090946"
+    },
+    {
+      "description": [
+        "Omeka SのIIIF Serverモジュールで生成したIIIFマニフェストについて、Image Serverを使用しない設定（後述）を行った際、以下の図に示すように、cors policyによって画像の読み込みエラーが生じるケースが見られました。以下のようなメッセージは、各ブ…"
+      ],
+      "Updated": ["2022-02-21"],
+      "collections": ["omeka-s-module", "omeka-s", "メモ", "omeka"],
+      "date": "2022-02-21",
+      "label": "Omeka S IIIF Serverモジュール使用時におけるcors policyの設定について",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-02-21"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Omeka SのIIIF Serverモジュールで生成したIIIFマニフェストについて、Image Serverを使用しない設定（後述）を行った際、以下の図に示すように、cors policyによって画像の読み込みエラーが生じるケースが見られました。以下のようなメッセージは、各ブ…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/02/21/124840"
+    },
+    {
+      "description": [
+        "JavaScriptのquerySelector()でxml:idに特定の値を持つ要素を取得する方法についての備忘録です。 具体的には、例えばmyDocという変数に対して、以下の方法で取得できます。この例では、xml:id属性にabcという値を持つ要素を取得します。 myDoc.…"
+      ],
+      "Updated": ["2022-02-21"],
+      "collections": ["TEI", "メモ"],
+      "date": "2022-02-21",
+      "label": "JavaScriptのquerySelector()でxml:idに特定の値を持つ要素を取得する方法",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-02-21"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "JavaScriptのquerySelector()でxml:idに特定の値を持つ要素を取得する方法についての備忘録です。 具体的には、例えばmyDocという変数に対して、以下の方法で取得できます。この例では、xml:id属性にabcという値を持つ要素を取得します。 myDoc.…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/02/21/090130"
+    },
+    {
+      "description": [
+        "Omeka Sにダミーデータを登録するためのCSVファイルを作成するプログラムを作成しました。以下のGoogle Colabからご利用いただけます。 https://colab.research.google.com/drive/1Wy865vh9GpUPyiudu1L2A6RP…"
+      ],
+      "Updated": ["2022-02-17"],
+      "collections": ["omeka-s", "omeka"],
+      "date": "2022-02-17",
+      "label": "【Omeka S・開発】Omeka Sにダミーデータを登録するためのCSVファイルを作成するプログラムを作成しました。",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-02-17"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Omeka Sにダミーデータを登録するためのCSVファイルを作成するプログラムを作成しました。以下のGoogle Colabからご利用いただけます。 https://colab.research.google.com/drive/1Wy865vh9GpUPyiudu1L2A6RP…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/02/17/220754"
+    },
+    {
+      "description": [
+        "概要 Omeka Sに地図を追加するMappingモジュールの使い方、特にCSVインポートモジュールを用いた一括登録の方法について説明します。 Omeka S - Mapping モジュールのインストール まず、Mappingモジュールをインストールします。 また、データの一括登…"
+      ],
+      "Updated": ["2022-02-15"],
+      "collections": ["omeka-s", "omeka-s-module", "omeka"],
+      "date": "2022-02-15",
+      "label": "【Omeka S モジュール紹介】Mappingモジュールの使い方（特にCSVインポートモジュールを用いた一括登録）",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-02-15"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 Omeka Sに地図を追加するMappingモジュールの使い方、特にCSVインポートモジュールを用いた一括登録の方法について説明します。 Omeka S - Mapping モジュールのインストール まず、Mappingモジュールをインストールします。 また、データの一括登…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/02/15/172730"
+    },
+    {
+      "description": [
+        "アイテムの詳細画面に各種エクスポートリンクを設置するモジュールを開発しました。 github.com 本モジュールをインストールすることにより、以下に示すようなエクスポートリンクが表示されます。 具体的には、JSON-LD、テキストデータ、引用、コンテンツ共有、に関するエクスポー…"
+      ],
+      "Updated": ["2022-02-14"],
+      "collections": ["omeka-s", "omeka-s-module", "omeka"],
+      "date": "2022-02-14",
+      "label": "【Omeka S モジュール開発】アイテムの詳細画面に各種エクスポートリンクを設置するモジュールを開発しました。",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-02-14"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "アイテムの詳細画面に各種エクスポートリンクを設置するモジュールを開発しました。 github.com 本モジュールをインストールすることにより、以下に示すようなエクスポートリンクが表示されます。 具体的には、JSON-LD、テキストデータ、引用、コンテンツ共有、に関するエクスポー…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/02/14/002502"
+    },
+    {
+      "description": [
+        "概要 IIIFマニフェストにIIIF Content Search APIのURIを追加するOmeka Sのモジュールを開発しました。 github.com IIIF Content Search APIを使用することにより、以下のように、Universal Viewer等でテキ…"
+      ],
+      "Updated": ["2022-02-11"],
+      "collections": ["omeka-s", "omeka-s-module", "IIIF", "omeka"],
+      "date": "2022-02-11",
+      "label": "【Omeka S モジュール開発】IIIFマニフェストにIIIF Content Search APIのURIを追加するモジュールを開発しました。",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-02-11"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 IIIFマニフェストにIIIF Content Search APIのURIを追加するOmeka Sのモジュールを開発しました。 github.com IIIF Content Search APIを使用することにより、以下のように、Universal Viewer等でテキ…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/02/11/222753"
+    },
+    {
+      "description": [
+        "◆ 不具合 Omeka S3 に Clean Url モジュールをインストールし、初期設定を行なったにもかかわらず、サイトのアイテム詳細ページなどにおいて、設定したアイテムの識別子が表示されない（Omekaが自動付与するIDがそのまま表示されてしまう）不具合を確認しました。 ◆ …"
+      ],
+      "Updated": ["2022-02-01"],
+      "collections": ["omeka-s", "omeka-s-module", "omeka"],
+      "date": "2022-02-01",
+      "label": "【Omeka S モジュール情報共有】Clean Urlモジュールの不具合と暫定の修正方法",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2022-02-01"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "◆ 不具合 Omeka S3 に Clean Url モジュールをインストールし、初期設定を行なったにもかかわらず、サイトのアイテム詳細ページなどにおいて、設定したアイテムの識別子が表示されない（Omekaが自動付与するIDがそのまま表示されてしまう）不具合を確認しました。 ◆ …"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2022/02/01/231400"
+    },
+    {
+      "description": [
+        "概要 ジャパンナレッジで検索を行うChrome拡張機能を公開しました。 以下のように、選択した文字列をクエリとして、右クリックからジャパンナレッジの検索結果を表示します。 本記事では、この拡張機能の使い方について説明します。 概要 インストール 設定 URL その他のクエリ 検索…"
+      ],
+      "Updated": ["2021-09-30"],
+      "collections": ["Chrome拡張機能"],
+      "date": "2021-09-30",
+      "label": "ジャパンナレッジで検索を行うChrome拡張機能を公開しました。",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-09-30"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 ジャパンナレッジで検索を行うChrome拡張機能を公開しました。 以下のように、選択した文字列をクエリとして、右クリックからジャパンナレッジの検索結果を表示します。 本記事では、この拡張機能の使い方について説明します。 概要 インストール 設定 URL その他のクエリ 検索…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/09/30/005315"
+    },
+    {
+      "description": [
+        "概要 今回はMirador 3のimage tools（画像の回転など）を初期表示で有効にする方法について説明します。 デフォルトのMirador 3では、Mirador 2ではデフォルトの機能として提供されていた、画像の回転や明度・コントラスト・彩度の調整機能は提供されていませ…"
+      ],
+      "Updated": ["2021-09-16"],
+      "collections": ["IIIF", "mirador"],
+      "date": "2021-09-16",
+      "label": "Mirador 3のimage tools（画像の回転など）を初期表示で有効にする方法",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-09-16"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 今回はMirador 3のimage tools（画像の回転など）を初期表示で有効にする方法について説明します。 デフォルトのMirador 3では、Mirador 2ではデフォルトの機能として提供されていた、画像の回転や明度・コントラスト・彩度の調整機能は提供されていませ…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/09/16/073428"
+    },
+    {
+      "description": [
+        "概要 2021年9月15日時点でOmeka Sのモジュールとして提供されているIIIF対応ビューアをまとめます。 概要 ビューア一覧 Universal Viewer Mirador Diva IIIF Viewer まとめ ビューア一覧 Universal Viewer git…"
+      ],
+      "Updated": ["2021-09-15"],
+      "collections": ["IIIF", "mirador", "omeka-s", "omeka-s-module", "omeka"],
+      "date": "2021-09-15",
+      "label": "【Omeka S モジュール紹介】Omeka Sで利用可能なIIIF対応ビューア",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-09-15"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 2021年9月15日時点でOmeka Sのモジュールとして提供されているIIIF対応ビューアをまとめます。 概要 ビューア一覧 Universal Viewer Mirador Diva IIIF Viewer まとめ ビューア一覧 Universal Viewer git…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/09/15/145809"
+    },
+    {
+      "description": [
+        "概要 前回の記事では、Omeka SのIIIF Serverモジュールを用いて、フラットな目次を追加する方法について説明しました。 nakamura196.hatenablog.com 今回は、階層構造を持つ目次を追加する方法について説明します。 公式のマニュアルはこちらにありま…"
+      ],
+      "Updated": ["2021-08-13"],
+      "collections": ["IIIF", "omeka-s", "omeka-s-module", "omeka"],
+      "date": "2021-08-13",
+      "label": "【機能開発】Omeka SのIIIFモジュールで、目次を加える機能を追加しました。（その２：階層構造を持つ目次の登録）",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-08-13"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 前回の記事では、Omeka SのIIIF Serverモジュールを用いて、フラットな目次を追加する方法について説明しました。 nakamura196.hatenablog.com 今回は、階層構造を持つ目次を追加する方法について説明します。 公式のマニュアルはこちらにありま…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/08/13/065130"
+    },
+    {
+      "description": [
+        "概要 Omeka SのIIIF Serverモジュールについて、IIIFマニフェストに目次を加える機能を追加開発しました。以下の、ver 3.6.5.3から本機能が利用可能です。 github.com 本記事では、本モジュールを用いて、目次を追加する方法について説明します。なお、…"
+      ],
+      "Updated": ["2021-08-13"],
+      "collections": ["IIIF", "omeka-s", "omeka-s-module", "omeka"],
+      "date": "2021-08-13",
+      "label": "【機能開発】Omeka SのIIIFモジュールで、目次を加える機能を追加しました。（その１：フラットな目次の登録）",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-08-13"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 Omeka SのIIIF Serverモジュールについて、IIIFマニフェストに目次を加える機能を追加開発しました。以下の、ver 3.6.5.3から本機能が利用可能です。 github.com 本記事では、本モジュールを用いて、目次を追加する方法について説明します。なお、…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/08/13/065126"
+    },
+    {
+      "description": [
+        "Omeka SのIIIF Serverモジュールについて、IIIF Presentation APIのバージョン2を使用する際の、ライセンスプロパティにおける不具合を修正しました。 具体的には、以下のIIIF Serverモジュールのライセンスに関する設定において、設定内容がII…"
+      ],
+      "Updated": ["2021-08-13"],
+      "collections": ["IIIF", "omeka-s", "omeka-s-module", "omeka"],
+      "date": "2021-08-13",
+      "label": "【機能開発】Omeka SのIIIF Serverモジュールにおけるライセンスプロパティの不具合修正",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-08-13"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Omeka SのIIIF Serverモジュールについて、IIIF Presentation APIのバージョン2を使用する際の、ライセンスプロパティにおける不具合を修正しました。 具体的には、以下のIIIF Serverモジュールのライセンスに関する設定において、設定内容がII…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/08/13/063452"
+    },
+    {
+      "description": [
+        "Omeka S IIIF Serverモジュールの目次情報の追加方法に関するマニュアルの和訳です。公式のマニュアルは以下です。 github.com 本モジュールを用いて、IIIFマニフェストに目次情報を追加する際の参考になりましたら幸いです。 Config options fo…"
+      ],
+      "Updated": ["2021-08-11"],
+      "collections": ["和訳", "omeka-s", "omeka-s-module", "IIIF", "omeka"],
+      "date": "2021-08-11",
+      "label": "【和訳】Omeka S IIIF Serverモジュールの目次情報の追加方法",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-08-11"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Omeka S IIIF Serverモジュールの目次情報の追加方法に関するマニュアルの和訳です。公式のマニュアルは以下です。 github.com 本モジュールを用いて、IIIFマニフェストに目次情報を追加する際の参考になりましたら幸いです。 Config options fo…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/08/11/180003"
+    },
+    {
+      "description": [
+        "先日、以下の記事で、Nuxt.jsを用いて、Miradorをページ内の特定の領域に埋め込む方法を紹介しました。 nakamura196.hatenablog.com 今回は、Vue.jsなどのフレームワークを使わずに、Miradorを埋め込む方法について紹介します。 具体的には、…"
+      ],
+      "Updated": ["2021-08-10"],
+      "collections": ["IIIF", "mirador"],
+      "date": "2021-08-10",
+      "label": "Mirador 3をページ内の特定の領域に埋め込む方法",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-08-10"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "先日、以下の記事で、Nuxt.jsを用いて、Miradorをページ内の特定の領域に埋め込む方法を紹介しました。 nakamura196.hatenablog.com 今回は、Vue.jsなどのフレームワークを使わずに、Miradorを埋め込む方法について紹介します。 具体的には、…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/08/10/094539"
+    },
+    {
+      "description": [
+        "概要 本記事では、TEI/XMLを便利に扱うことができるツール「Oxygen XML Editor」において、自動で整形・インデントするルールを変更する方法について紹介します。 特に、行の始まりを示すlbタグの前で改行されるようにすることを目指します。 背景 TEI/XMLを便利…"
+      ],
+      "Updated": ["2021-08-08"],
+      "collections": ["TEI"],
+      "date": "2021-08-08",
+      "label": "Oxygenの自動整形機能においてlbタグの前で改行する方法",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-08-08"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 本記事では、TEI/XMLを便利に扱うことができるツール「Oxygen XML Editor」において、自動で整形・インデントするルールを変更する方法について紹介します。 特に、行の始まりを示すlbタグの前で改行されるようにすることを目指します。 背景 TEI/XMLを便利…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/08/08/065927"
+    },
+    {
+      "description": [
+        "概要 以下の記事で、Mirador 3をVueで使用する方法を紹介しました。 nakamura196.hatenablog.com 上記に続いて、今回は、Nuxt.jsでMirador 3を使用する方法を紹介するGitHubリポジトリを作成しました。 github.com 上記リ…"
+      ],
+      "Updated": ["2021-08-07"],
+      "collections": ["IIIF", "mirador"],
+      "date": "2021-08-07",
+      "label": "Mirador 3をNuxt.jsで使用する方法を紹介するリポジトリを作成しました。",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-08-07"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 以下の記事で、Mirador 3をVueで使用する方法を紹介しました。 nakamura196.hatenablog.com 上記に続いて、今回は、Nuxt.jsでMirador 3を使用する方法を紹介するGitHubリポジトリを作成しました。 github.com 上記リ…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/08/07/142037"
+    },
+    {
+      "description": [
+        "概要 以下の記事で、CSVファイルを用いたメタデータと画像の一括登録を行うためのモジュール「BulkImport」について紹介しました。 nakamura196.hatenablog.com こちらの記事では、CSVファイルを作成して登録する方法を紹介していますが、macOSでは…"
+      ],
+      "Updated": ["2021-08-07"],
+      "collections": ["omeka-s-module", "omeka-s", "Tips", "omeka"],
+      "date": "2021-08-07",
+      "label": "【Omeka S Tips】WindowsでBulkImportモジュールを使用する際の注意点",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-08-07"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 以下の記事で、CSVファイルを用いたメタデータと画像の一括登録を行うためのモジュール「BulkImport」について紹介しました。 nakamura196.hatenablog.com こちらの記事では、CSVファイルを作成して登録する方法を紹介していますが、macOSでは…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/08/07/070651"
+    },
+    {
+      "description": [
+        "概要 最新のOmeka Sでは、Omeka Sへのアイテム新規登録時において、サイト毎に自動的にリソースとして登録するか否かを設定できるようになっています。 公式のマニュアルでは、以下に記載があります。 https://omeka.org/s/docs/user-manual/s…"
+      ],
+      "Updated": ["2021-08-06"],
+      "collections": ["Tips", "omeka-s", "omeka"],
+      "date": "2021-08-06",
+      "label": "【Omeka S Tips】アイテムの新規登録における各サイトへの自動追加の設定について",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-08-06"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 最新のOmeka Sでは、Omeka Sへのアイテム新規登録時において、サイト毎に自動的にリソースとして登録するか否かを設定できるようになっています。 公式のマニュアルでは、以下に記載があります。 https://omeka.org/s/docs/user-manual/s…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/08/06/114502"
+    },
+    {
+      "description": [
+        "概要 特定のプロパティを数値データとして設定できるようにするモジュール「Numeric Data Types」について説明します。プロパティは、日付と時刻（ISO）、または数値として指定できます。 特に、日付データに対する範囲検索を実現できる点などがポイントです。 github.…"
+      ],
+      "Updated": ["2021-08-01"],
+      "collections": ["omeka-s", "omeka-s-module", "RDF", "omeka"],
+      "date": "2021-08-01",
+      "label": "【Omeka S モジュール紹介】Numeric Data Types：日付データに対する範囲検索を可能にする、など",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-08-01"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 特定のプロパティを数値データとして設定できるようにするモジュール「Numeric Data Types」について説明します。プロパティは、日付と時刻（ISO）、または数値として指定できます。 特に、日付データに対する範囲検索を実現できる点などがポイントです。 github.…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/08/01/070701"
+    },
+    {
+      "description": [
+        "概要 Nuxt.jsでvis.jsを使用する方法を紹介するGitHubリポジトリを作成しました。 github.com 以下のページから、デモサイトをご確認いただけます。 https://nuxt-visjs.netlify.app/ 詳細 Nuxt.jsはVue.jsをより効果…"
+      ],
+      "Updated": ["2021-07-29"],
+      "collections": ["vue", "nuxt", "network", "timeline"],
+      "date": "2021-07-29",
+      "label": "Nuxt.jsでvis.jsを使用する方法を紹介するGitHubリポジトリを作成しました。",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-29"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 Nuxt.jsでvis.jsを使用する方法を紹介するGitHubリポジトリを作成しました。 github.com 以下のページから、デモサイトをご確認いただけます。 https://nuxt-visjs.netlify.app/ 詳細 Nuxt.jsはVue.jsをより効果…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/29/235727"
+    },
+    {
+      "description": [
+        "概要 今回は、Omeka Sのアイテム詳細画面に対して、同じメタデータを持つアイテムの検索を可能とするリンクを付与するモジュール「Metadata Browse」について紹介します。 omeka.org 例えば、以下のようなことが可能となります。アイテム詳細画面の「キーワード／S…"
+      ],
+      "Updated": ["2021-07-29"],
+      "collections": ["omeka-s", "omeka-s-module", "omeka"],
+      "date": "2021-07-29",
+      "label": "【Omeka S モジュール紹介】Metadata Browse：同じメタデータを持つアイテムを検索するリンクを付与する",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-29"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 今回は、Omeka Sのアイテム詳細画面に対して、同じメタデータを持つアイテムの検索を可能とするリンクを付与するモジュール「Metadata Browse」について紹介します。 omeka.org 例えば、以下のようなことが可能となります。アイテム詳細画面の「キーワード／S…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/29/224619"
+    },
+    {
+      "description": [
+        "更新履歴 2021-08-07 本記事で紹介した方法をWindowsで用いる場合に、一部不具合が生じることが確認されました。対応策などについて、以下の記事で紹介しています。同様の不具合が生じた際には、参考にしてください。 nakamura196.hatenablog.com 概要…"
+      ],
+      "Updated": ["2021-07-28"],
+      "collections": ["omeka-s", "omeka-s-module", "omeka"],
+      "date": "2021-07-28",
+      "label": "【Omeka S モジュール紹介】Bulk Import：CSVファイルを用いたメタデータと画像の一括登録",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-28"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "更新履歴 2021-08-07 本記事で紹介した方法をWindowsで用いる場合に、一部不具合が生じることが確認されました。対応策などについて、以下の記事で紹介しています。同様の不具合が生じた際には、参考にしてください。 nakamura196.hatenablog.com 概要…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/28/080952"
+    },
+    {
+      "description": [
+        "ここでは、Omeka SのOaiPmhRepositoryのカスタマイズ例として、DC-NDL（Simple）にマッピングしてメタデータを公開する方法について説明します。 以下のGitLabリポジトリを適宜参考にしてください。 gitlab.com ※ 別途、OaiPmhRepo…"
+      ],
+      "Updated": ["2021-07-25"],
+      "collections": [
+        "カスタマイズ",
+        "omeka-s",
+        "omeka-s-module",
+        "OAI-PMH",
+        "omeka"
+      ],
+      "date": "2021-07-25",
+      "label": "【Omeka S モジュールカスタマイズ】OaiPmhRepository：独自語彙の作成",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-25"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "ここでは、Omeka SのOaiPmhRepositoryのカスタマイズ例として、DC-NDL（Simple）にマッピングしてメタデータを公開する方法について説明します。 以下のGitLabリポジトリを適宜参考にしてください。 gitlab.com ※ 別途、OaiPmhRepo…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/25/222651"
+    },
+    {
+      "description": [
+        "概要 Advanced Search PlusはOmeka Sでのより柔軟な検索を可能とするための、詳細検索に項目などを追加するモジュールです。 omeka.org 本記事では、本モジュールの使い方について説明します。 使い方 本モジュールをインストールすることにより、以下の項目…"
+      ],
+      "Updated": ["2021-07-25"],
+      "collections": ["omeka-s", "omeka-s-module", "omeka"],
+      "date": "2021-07-25",
+      "label": "【Omeka S モジュール紹介】Advanced Search Plus：詳細検索機能を拡張する",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-25"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 Advanced Search PlusはOmeka Sでのより柔軟な検索を可能とするための、詳細検索に項目などを追加するモジュールです。 omeka.org 本記事では、本モジュールの使い方について説明します。 使い方 本モジュールをインストールすることにより、以下の項目…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/25/201546"
+    },
+    {
+      "description": [
+        "概要 Custom Ontologyは、LOV、schema.org、W3Cといった標準的なオントロジーが利用できないときに、独自の語彙を追加することができるモジュールです。内部プロパティを管理したり、新しいデータを作成している研究者にとって便利です。本記事では、このモジュールの…"
+      ],
+      "Updated": ["2021-07-24"],
+      "collections": [
+        "omeka-s",
+        "omeka-s-module",
+        "RDF",
+        "Linked Data",
+        "omeka"
+      ],
+      "date": "2021-07-25",
+      "label": "【Omeka S モジュール紹介】Custom Ontology：独自語彙を追加する",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-24"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 Custom Ontologyは、LOV、schema.org、W3Cといった標準的なオントロジーが利用できないときに、独自の語彙を追加することができるモジュールです。内部プロパティを管理したり、新しいデータを作成している研究者にとって便利です。本記事では、このモジュールの…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/24/235050"
+    },
+    {
+      "description": [
+        "以下、GitHubのREADME.mdの一部和訳です。 github.com CollectiveAccessについて CollectiveAccessは、博物館、アーカイブ、および研究のコンテキストで複雑なデジタルおよび物理コレクションを管理、説明、および発見するためのフレーム…"
+      ],
+      "Updated": ["2021-07-25"],
+      "collections": ["メモ", "デジタルアーカイブ"],
+      "date": "2021-07-25",
+      "label": "【FOSSメモ】CollectiveAccess",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-25"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "以下、GitHubのREADME.mdの一部和訳です。 github.com CollectiveAccessについて CollectiveAccessは、博物館、アーカイブ、および研究のコンテキストで複雑なデジタルおよび物理コレクションを管理、説明、および発見するためのフレーム…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/25/074624"
+    },
+    {
+      "description": [
+        "概要 Omeka SではRDF（Resource Description Framework）を用いてリソース（アイテム、アイテムセット、メディア、etc...）の情報を記述します。そのため、RDFのクラスやプロパティのコレクションである語彙をインポートする必要があります。この記…"
+      ],
+      "Updated": ["2021-07-24"],
+      "collections": ["omeka-s", "Tips", "RDF", "Linked Data", "omeka"],
+      "date": "2021-07-24",
+      "label": "【Omeka S Tips】既存の標準語彙の追加方法",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-24"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 Omeka SではRDF（Resource Description Framework）を用いてリソース（アイテム、アイテムセット、メディア、etc...）の情報を記述します。そのため、RDFのクラスやプロパティのコレクションである語彙をインポートする必要があります。この記…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/24/233349"
+    },
+    {
+      "description": [
+        "Cultural Japanプロジェクトの一環で開発したアプリケーション「IIIF Pocket」に関するご紹介です。 pocket.cultural.jp 本アプリケーションの説明は、以下のGoogleドキュメントにまとめています。 docs.google.com IIIFリソ…"
+      ],
+      "Updated": ["2021-07-24"],
+      "collections": ["Cultural Japan", "IIIF", "アプリケーション"],
+      "date": "2021-07-24",
+      "label": "【アプリ紹介】IIIF pocketのご紹介",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-24"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Cultural Japanプロジェクトの一環で開発したアプリケーション「IIIF Pocket」に関するご紹介です。 pocket.cultural.jp 本アプリケーションの説明は、以下のGoogleドキュメントにまとめています。 docs.google.com IIIFリソ…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/24/134358"
+    },
+    {
+      "description": [
+        "Omeka Sのマニュアル和訳です。以下の「リソース」>「アイテム」ページです。 omeka.org アイテム アイテムは、Omekaシステムの構成要素です。 Omeka Sでは、システム管理者からアイテムを利用できるようにしたり、自分のサイトにアイテムを追加したりできます。 ア…"
+      ],
+      "Updated": ["2021-07-24"],
+      "collections": ["omeka-s", "マニュアル", "和訳", "omeka"],
+      "date": "2021-07-24",
+      "label": "【Omeka S マニュアル和訳】リソース > アイテム",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-24"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Omeka Sのマニュアル和訳です。以下の「リソース」>「アイテム」ページです。 omeka.org アイテム アイテムは、Omekaシステムの構成要素です。 Omeka Sでは、システム管理者からアイテムを利用できるようにしたり、自分のサイトにアイテムを追加したりできます。 ア…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/24/133205"
+    },
+    {
+      "description": [
+        "メタデータの言語設定の方法について紹介します。公式のマニュアルでは、以下に記載があります。 omeka.org 以下のメタデータ編集画面において、地球儀のアイコンをクリックすると、入力フォームが現れます。こちらにjaやenなどを入力することで、メタデータの言語属性を与えることがで…"
+      ],
+      "Updated": ["2021-07-24"],
+      "collections": ["omeka-s", "Tips", "omeka"],
+      "date": "2021-07-24",
+      "label": "【Omeka S Tips】メタデータの言語属性の設定方法",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-24"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "メタデータの言語設定の方法について紹介します。公式のマニュアルでは、以下に記載があります。 omeka.org 以下のメタデータ編集画面において、地球儀のアイコンをクリックすると、入力フォームが現れます。こちらにjaやenなどを入力することで、メタデータの言語属性を与えることがで…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/24/132347"
+    },
+    {
+      "description": [
+        "概要 Item Sets Treeはアイテムセットの階層構造を設定できるモジュールです。 本モジュールの使い方についてご紹介します。 omeka.org 概要 インストール データ 機能紹介 親アイテムセットの設定 階層構造の確認 各アイテムセットのアイテム一覧画面における子孫の…"
+      ],
+      "Updated": ["2021-07-21"],
+      "collections": [
+        "omeka-s",
+        "デジタルアーカイブ",
+        "omeka-s-module",
+        "omeka"
+      ],
+      "date": "2021-07-23",
+      "label": "【Omeka S モジュール紹介】Item Sets Tree",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-21"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 Item Sets Treeはアイテムセットの階層構造を設定できるモジュールです。 本モジュールの使い方についてご紹介します。 omeka.org 概要 インストール データ 機能紹介 親アイテムセットの設定 階層構造の確認 各アイテムセットのアイテム一覧画面における子孫の…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/21/215804"
+    },
+    {
+      "description": [
+        "Omeka SのIIIF関連モジュールである「IIIF Server」「Image Server」「Universal Viewer」の説明およびインストール手順を以下で紹介しています。 youtu.be Omeka SでのIIIF配信において、参考になりましたら幸いです。"
+      ],
+      "Updated": ["2021-07-23"],
+      "collections": ["IIIF", "omeka-s", "omeka-s-module", "omeka"],
+      "date": "2021-07-23",
+      "label": "【Omeka Sモジュール紹介】IIIF Server / Image Server / Universal Viewer",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-23"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Omeka SのIIIF関連モジュールである「IIIF Server」「Image Server」「Universal Viewer」の説明およびインストール手順を以下で紹介しています。 youtu.be Omeka SでのIIIF配信において、参考になりましたら幸いです。"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/23/004817"
+    },
+    {
+      "description": [
+        "Omeka Sの導入方法およびモジュールの追加方法を以下でまとめています。Omeka Sの導入にあたり、参考になりましたら幸いです。 youtube.com"
+      ],
+      "Updated": ["2021-07-23"],
+      "collections": ["omeka-s", "omeka-s-module", "omeka"],
+      "date": "2021-07-23",
+      "label": "Omeka Sの導入に関する参考資料",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-23"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Omeka Sの導入方法およびモジュールの追加方法を以下でまとめています。Omeka Sの導入にあたり、参考になりましたら幸いです。 youtube.com"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/23/004016"
+    },
+    {
+      "description": [
+        "Cultural Japanで集約したIIIFマニフェストについて、それらをまとめたIIIFコレクションを以下からご確認いただけます。 https://www.kanzaki.com/works/2016/pub/image-annotator?u=https://app.cul…"
+      ],
+      "Updated": ["2021-07-23"],
+      "collections": ["RDF", "Cultural Japan", "IIIF"],
+      "date": "2021-07-23",
+      "label": "Cultural Japanで集約したIIIFマニフェストをまとめたIIIFコレクションのご紹介",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-23"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Cultural Japanで集約したIIIFマニフェストについて、それらをまとめたIIIFコレクションを以下からご確認いただけます。 https://www.kanzaki.com/works/2016/pub/image-annotator?u=https://app.cul…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/23/003143"
+    },
+    {
+      "description": [
+        "Mirador 3をVueで使用する方法を紹介するリポジトリを作成しました。Vueを使ったアプリケーション開発の参考になれば幸いです。 github.com 本リポジトリの作成にあたっては、以下を参考にさせていただきました。 github.com なお、別のより簡単な方法として、…"
+      ],
+      "Updated": ["2021-07-22"],
+      "collections": ["mirador", "IIIF", "vue"],
+      "date": "2021-07-22",
+      "label": "Mirador 3をVueで使用する方法を紹介するリポジトリを作成しました。",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-22"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "Mirador 3をVueで使用する方法を紹介するリポジトリを作成しました。Vueを使ったアプリケーション開発の参考になれば幸いです。 github.com 本リポジトリの作成にあたっては、以下を参考にさせていただきました。 github.com なお、別のより簡単な方法として、…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/22/234800"
+    },
+    {
+      "description": [
+        "概要 Omeka SのIIIF Serverモジュールについて、Image APIを使用しない設定を追加する機能開発を行いました。これにより、レンタルサーバなどのリソースが限られた環境において、IIIFマニフェストなどの配信が容易となります。デジタルアーカイブシステムの持続性と利…"
+      ],
+      "Updated": ["2021-07-22"],
+      "collections": [
+        "IIIF",
+        "omeka-s",
+        "デジタルアーカイブ",
+        "omeka-s-module",
+        "omeka"
+      ],
+      "date": "2021-07-22",
+      "label": "【機能開発】Omeka SのIIIF ServerモジュールにおけるImage APIを使用しない設定の追加",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2021-07-22"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 Omeka SのIIIF Serverモジュールについて、Image APIを使用しない設定を追加する機能開発を行いました。これにより、レンタルサーバなどのリソースが限られた環境において、IIIFマニフェストなどの配信が容易となります。デジタルアーカイブシステムの持続性と利…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2021/07/22/171657"
+    },
+    {
+      "description": [
+        "概要 作成したアプリケーション 作成方法 IIIFマニフェストファイルの作成 Mirador 2のカスタマイズ まとめ 概要 「起絵図」のIIIF実装を行いました。東京大学駒場図書館所蔵「大日本海志編纂資料」に含まれる越絵図を対象にしています。 https://utda.gith…"
+      ],
+      "Updated": ["2020-08-14"],
+      "collections": ["IIIF", "東京大学デジタルアーカイブズ構築事業"],
+      "date": "2020-08-14",
+      "label": "「起絵図」のIIIF実装",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2020-08-14"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 作成したアプリケーション 作成方法 IIIFマニフェストファイルの作成 Mirador 2のカスタマイズ まとめ 概要 「起絵図」のIIIF実装を行いました。東京大学駒場図書館所蔵「大日本海志編纂資料」に含まれる越絵図を対象にしています。 https://utda.gith…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2020/08/14/073700"
+    },
+    {
+      "description": [
+        "概要 「透過光画像を使ったIIIFアプリケーション」を作成しました。東京大学総合図書館所蔵の「シェリー書簡」を対象にしています。 utda.github.io 作成したアプリケーション 本アプリケーションではIIIFの「代替資源の選択」を用いて、オリジナル画像と透過光画像を比較す…"
+      ],
+      "Updated": ["2020-08-14"],
+      "collections": ["IIIF", "東京大学デジタルアーカイブズ構築事業"],
+      "date": "2020-08-14",
+      "label": "透過光画像を使ったIIIFアプリケーション",
+      "metadata": [
+        {
+          "label": "Updated",
+          "value": ["2020-08-14"]
+        },
+        {
+          "label": "description",
+          "value": [
+            "概要 「透過光画像を使ったIIIFアプリケーション」を作成しました。東京大学総合図書館所蔵の「シェリー書簡」を対象にしています。 utda.github.io 作成したアプリケーション 本アプリケーションではIIIFの「代替資源の選択」を用いて、オリジナル画像と透過光画像を比較す…"
+          ]
+        }
+      ],
+      "url": "https://nakamura196.hatenablog.com/entry/2020/08/14/060255"
+    }
+  ],
+  "links": [
+    {
+      "label": "はてなブログ",
+      "value": "https://nakamura196.hatenablog.com"
+    }
+  ]
+}
