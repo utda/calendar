@@ -1,6 +1,55 @@
 <template>
   <div>
+    <v-navigation-drawer v-model="drawer" app :temporary="true">
+      <v-list>
+        <v-list-item exact :to="localePath({ name: 'index', query: { u } })">
+          <v-list-item-content>
+            <span>{{ $t('index') }} </span>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item
+          v-if="u"
+          exact
+          :to="localePath({ name: 'stats', query: { u } })"
+        >
+          <v-list-item-content>
+            <span>{{ $t('stats') }} </span>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-subheader
+          ><small
+            ><template v-if="linkLabel">
+              {{ linkLabel[$i18n.locale] }}
+            </template>
+            <template v-else>
+              {{ $t('links') }}
+            </template></small
+          ></v-subheader
+        >
+        <template v-for="(item, key) in links">
+          <v-list-item :key="key" target="_blank" :href="item.value">
+            <v-list-item-title
+              >{{ item.label }}
+              <v-icon>mdi-exit-to-app</v-icon></v-list-item-title
+            >
+          </v-list-item>
+        </template>
+
+        <v-subheader
+          ><small>{{ $t('language') }}</small></v-subheader
+        >
+        <v-list-item exact :to="switchLocalePath('ja')">
+          <v-list-item-title>日本語</v-list-item-title>
+        </v-list-item>
+        <v-list-item exact :to="switchLocalePath('en')">
+          <v-list-item-title>English</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
     <v-app-bar color="primary" dark flat>
+      <v-app-bar-nav-icon v-if="isMobile" @click.stop="drawer = !drawer" />
       <v-toolbar-title>
         <nuxt-link
           style="color: inherit"
@@ -8,14 +57,20 @@
           >{{ header || $t('calendar_search') }}</nuxt-link
         ></v-toolbar-title
       >
+
       <v-spacer></v-spacer>
 
-      <v-toolbar-items>
+      <v-toolbar-items v-if="!isMobile">
         <v-btn exact text :to="localePath({ name: 'index', query: { u } })">
           {{ $t('index') }}
         </v-btn>
-        <v-btn exact text :to="localePath({ name: 'analyze', query: { u } })">
-          {{ $t('analyze') }}
+        <v-btn
+          v-if="u"
+          exact
+          text
+          :to="localePath({ name: 'stats', query: { u } })"
+        >
+          {{ $t('stats') }}
         </v-btn>
 
         <v-menu v-if="links && links.length > 0" offset-y>
@@ -102,6 +157,20 @@ export default {
     langLabel: {
       type: Object,
       default: () => null,
+    },
+  },
+  data() {
+    return {
+      drawer: false,
+    }
+  },
+  computed: {
+    isMobile() {
+      if (['xs', 'sm'].includes(this.$vuetify.breakpoint.name)) {
+        return true
+      } else {
+        return false
+      }
     },
   },
 }

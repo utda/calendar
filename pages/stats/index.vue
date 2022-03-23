@@ -9,7 +9,7 @@
       :lang-label="result.lang_label"
       :link-label="result.link_label"
     />
-    <v-container class="mt-5">
+    <v-container class="my-5">
       <div v-if="item">
         <h3>{{ $t('itemsByYear') }}</h3>
         <BarChart :labels="item.labels" :datasets="item.datasets"></BarChart>
@@ -20,6 +20,14 @@
         <BarChart
           :labels="item4day.labels"
           :datasets="item4day.datasets"
+        ></BarChart>
+      </div>
+
+      <div v-for="(freq, key) in freqs" :key="key" class="mt-10">
+        <h3>{{ key }}</h3>
+        <BarChart
+          :labels="freq.labels"
+          :datasets="[{ label: 'item', data: freq.data }]"
         ></BarChart>
       </div>
     </v-container>
@@ -53,6 +61,7 @@ export default {
 
       item: null,
       item4day: null,
+      freqs: {},
     }
   },
   computed: {
@@ -84,6 +93,7 @@ export default {
 
     this.analyze()
     this.analyze2()
+    this.analyzeMetadata()
   },
   methods: {
     analyze() {
@@ -155,6 +165,56 @@ export default {
           },
         ],
       }
+    },
+    analyzeMetadata() {
+      const freqs = {}
+      for (const item of this.data_all) {
+        const metadata = item.metadata
+        for (const m of metadata) {
+          const label = m.label
+          if (!freqs[label]) {
+            freqs[label] = {}
+          }
+          const freq = freqs[label]
+          const values = m.value
+          for (const value of values) {
+            if (!freq[value]) {
+              freq[value] = 0
+            }
+            freq[value] += 1
+          }
+        }
+      }
+
+      const freqs_ = {}
+
+      for (const key in freqs) {
+        const freq = freqs[key]
+        // Create items array
+        const items = Object.keys(freq).map(function (key) {
+          return [key, freq[key]]
+        })
+
+        // Sort the array based on the second element
+        items.sort(function (first, second) {
+          return second[1] - first[1]
+        })
+
+        const labels = []
+        const data = []
+
+        for (const e of items) {
+          labels.push(e[0])
+          data.push(e[1])
+        }
+
+        freqs_[key] = {
+          labels,
+          data,
+        }
+      }
+
+      this.freqs = freqs_
     },
   },
 }
