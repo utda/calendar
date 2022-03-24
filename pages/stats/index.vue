@@ -32,7 +32,7 @@
         <ChartDiv
           :header="key"
           :labels="freq.labels"
-          :datasets="[{ label: 'item', data: freq.data }]"
+          :datasets="[{ label: $t('item'), data: freq.data }]"
         >
         </ChartDiv>
       </div>
