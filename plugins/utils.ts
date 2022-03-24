@@ -25,6 +25,7 @@ export class Utils {
     const header = result.header
     const footer = result.footer
     const links = result.links
+    const stats = result.stats
 
     const description = result.description
 
@@ -112,6 +113,7 @@ export class Utils {
       u,
       link_label: result.link_label,
       lang_label: result.lang_label,
+      stats,
     }
   }
 

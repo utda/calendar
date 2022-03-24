@@ -17,5 +17,6 @@
   "stats": "Statistics",
   "itemsByYear": "Number of items by year",
   "item": "Item",
-  "itemsByDay": "Number of items by day of the week"
+  "itemsByDay": "Number of items by day of the week",
+  "yAxesMax": "Max value of Y axes"
 }

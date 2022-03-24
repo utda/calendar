@@ -15,8 +15,15 @@ export default class ChartLine extends mixins(Bar) {
 
   @Prop({ default: [] }) datasets!: any[]
 
+  @Prop({ default: 0 }) max!: number
+
   @Watch('datasets', { deep: true })
   watchTmp() {
+    this.main()
+  }
+
+  @Watch('max', { deep: true })
+  watchThres() {
     this.main()
   }
 
@@ -33,16 +40,23 @@ export default class ChartLine extends mixins(Bar) {
       datasets,
     }
 
+    const ticks: any = {
+      beginAtZero: true,
+      stepSize: 1,
+    }
+
+    const max = this.max
+    if (max > 0) {
+      ticks.max = max
+    }
+
     const chartOption: any = {
       // アスペクト比を固定しないように変更
       maintainAspectRatio: false,
       scales: {
         yAxes: [
           {
-            ticks: {
-              beginAtZero: true,
-              stepSize: 1,
-            },
+            ticks,
           },
         ],
       },

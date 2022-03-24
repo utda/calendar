@@ -11,24 +11,30 @@
     />
     <v-container class="my-5">
       <div v-if="item">
-        <h3>{{ $t('itemsByYear') }}</h3>
-        <BarChart :labels="item.labels" :datasets="item.datasets"></BarChart>
+        <ChartDiv
+          :header="$t('itemsByYear')"
+          :labels="item.labels"
+          :datasets="item.datasets"
+        >
+        </ChartDiv>
       </div>
 
       <div v-if="item4day" class="mt-10">
-        <h3>{{ $t('itemsByDay') }}</h3>
-        <BarChart
+        <ChartDiv
+          :header="$t('itemsByDay')"
           :labels="item4day.labels"
           :datasets="item4day.datasets"
-        ></BarChart>
+        >
+        </ChartDiv>
       </div>
 
       <div v-for="(freq, key) in freqs" :key="key" class="mt-10">
-        <h3>{{ key }}</h3>
-        <BarChart
+        <ChartDiv
+          :header="key"
           :labels="freq.labels"
           :datasets="[{ label: 'item', data: freq.data }]"
-        ></BarChart>
+        >
+        </ChartDiv>
       </div>
     </v-container>
 
@@ -39,13 +45,15 @@
 <script>
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
-import BarChart from '~/components/BarChart'
+// import BarChart from '~/components/BarChart'
+import ChartDiv from '~/components/ChartDiv'
 
 export default {
   components: {
     Header,
     Footer,
-    BarChart,
+    // BarChart,
+    ChartDiv,
   },
   data() {
     return {
@@ -62,6 +70,8 @@ export default {
       item: null,
       item4day: null,
       freqs: {},
+
+      stats: [],
     }
   },
   computed: {
@@ -90,6 +100,8 @@ export default {
     this.data_all = data.items
 
     this.result = data
+
+    this.stats = data.stats
 
     this.analyze()
     this.analyze2()
@@ -168,10 +180,16 @@ export default {
     },
     analyzeMetadata() {
       const freqs = {}
+      const stats = this.stats
       for (const item of this.data_all) {
         const metadata = item.metadata
         for (const m of metadata) {
           const label = m.label
+
+          if (stats && !stats.includes(label)) {
+            continue
+          }
+
           if (!freqs[label]) {
             freqs[label] = {}
           }

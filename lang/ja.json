@@ -17,5 +17,6 @@
   "stats": "統計",
   "itemsByYear": "年ごとのアイテム数",
   "item": "アイテム",
-  "itemsByDay": "曜日ごとのアイテム数"
+  "itemsByDay": "曜日ごとのアイテム数",
+  "yAxesMax": "Y軸の最大値"
 }
