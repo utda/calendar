@@ -5,14 +5,15 @@ const shortName = 'カレンダー'
 const siteKeywords = ['IIIF', 'デジタルアーカイブ'].join(', ')
 const gtag = ''
 const hostname = 'https://ldasjp8.github.io'
-const baseUrl = hostname + '/calendar'
+const slug = "" // /calendar
+const baseUrl = hostname + slug
 
 // `DEPLOY_ENV` が `GH_PAGES` の場合のみ `router.base = '/<repository-name>/'` を追加する
 const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES'
     ? {
         router: {
-          base: '/calendar/',
+          base: slug + '/',
         },
       }
     : {}
