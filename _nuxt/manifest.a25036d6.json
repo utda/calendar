@@ -3,7 +3,7 @@
   "short_name": "カレンダー",
   "description": "カレンダー形式の可視化を行います。",
   "icons": [],
-  "start_url": "/calendar/?standalone=true",
+  "start_url": "/?standalone=true",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
