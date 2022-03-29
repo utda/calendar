@@ -4,9 +4,14 @@ const siteDesc = 'カレンダー形式の可視化を行います。'
 const shortName = 'カレンダー'
 const siteKeywords = ['IIIF', 'デジタルアーカイブ'].join(', ')
 const gtag = ''
-const hostname = 'https://ldasjp8.github.io'
-const slug = "" // /calendar
-const baseUrl = hostname + slug
+const hostname = 'https://calendar.dl.itc.u-tokyo.ac.jp' // 'https://ldasjp8.github.io'
+const slug = '' // /calendar
+// const baseUrl = hostname + slug
+
+const env = {
+  hostname,
+  slug,
+}
 
 // `DEPLOY_ENV` が `GH_PAGES` の場合のみ `router.base = '/<repository-name>/'` を追加する
 const routerBase =
@@ -21,6 +26,8 @@ const routerBase =
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
+
+  env,
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',

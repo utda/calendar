@@ -186,6 +186,7 @@ export default {
       const data = await this.$utils.getIndex(this.$route)
 
       if (data.redirect) {
+        /*
         this.$router.push(
           this.localePath({
             name: 'index',
@@ -194,6 +195,9 @@ export default {
             },
           })
         )
+        */
+        location.href =
+          process.env.hostname + process.env.slug + '/?u=' + data.u
       }
 
       this.u = data.u
