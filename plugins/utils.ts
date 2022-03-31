@@ -100,7 +100,11 @@ export class Utils {
         }
       }
 
-      index.fulltext[fulltext] = [i]
+      const tmp = index.fulltext
+      if (!tmp[fulltext]) {
+        tmp[fulltext] = []
+      }
+      tmp[fulltext].push(i)
     }
 
     return {
