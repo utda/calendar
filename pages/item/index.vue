@@ -364,3 +364,10 @@ export default {
   },
 }
 </script>
+<style>
+/* stylelint-disable */
+.v-calendar-daily_head-day {
+  overflow-y: auto;
+  max-height: 200px;
+}
+</style>
