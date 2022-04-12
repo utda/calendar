@@ -368,6 +368,6 @@ export default {
 /* stylelint-disable */
 .v-calendar-daily_head-day {
   overflow-y: auto;
-  max-height: 200px;
+  max-height: 600px;
 }
 </style>
