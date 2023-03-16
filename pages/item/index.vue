@@ -281,6 +281,13 @@ export default {
 
       const events = []
 
+      // 昇順
+      data.sort(function (a, b) {
+        const labelA = String(a.label)
+        const labelB = String(b.label)
+        return -1 * labelA.localeCompare(labelB, 'ja')
+      })
+
       for (let i = 0; i < data.length; i++) {
         const obj = data[i]
         events.push({
