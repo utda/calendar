@@ -152,6 +152,7 @@
 </template>
 
 <script>
+import { kanji2number, findKanjiNumbers } from '@geolonia/japanese-numeral'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 import SearchForm from '~/components/SearchForm'
@@ -281,15 +282,37 @@ export default {
 
       const events = []
 
+      const data_ = []
+
+      for(const obj of data) {
+        // if(obj.date === "1904-10-13") {
+        data_.push(obj)
+        // }
+      }
+
       // 昇順
-      data.sort(function (a, b) {
-        const labelA = String(a.label)
-        const labelB = String(b.label)
-        return -1 * labelA.localeCompare(labelB, 'ja')
+      data_.sort(function (a, b) {
+        let labelA = String(a.label)
+        let labelB = String(b.label)
+
+        const numbersA = findKanjiNumbers(labelA)
+        const numbersB = findKanjiNumbers(labelB)
+
+        for(const numberA of numbersA) {
+          const han = kanji2number(numberA)
+          labelA = labelA.replace(numberA, han)
+        }
+
+        for(const numberB of numbersB) {
+          const han = kanji2number(numberB)
+          labelB = labelB.replace(numberB, han)
+        }
+
+        return labelA.localeCompare(labelB, 'ja')
       })
 
-      for (let i = 0; i < data.length; i++) {
-        const obj = data[i]
+      for (let i = 0; i < data_.length; i++) {
+        const obj = data_[i]
         events.push({
           name: obj.label,
           start: obj.date,

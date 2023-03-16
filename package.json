@@ -15,6 +15,7 @@
     "generate:gh-pages": "DEPLOY_ENV=GH_PAGES NODE_ENV=\"production\" nuxt generate"
   },
   "dependencies": {
+    "@geolonia/japanese-numeral": "^0.1.16",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/google-gtag": "^1.0.4",
     "@nuxtjs/i18n": "^7.2.0",
