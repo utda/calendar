@@ -1,0 +1,32 @@
+version: 2
+updates:
+  # GitHub Actions: SHA pin したアクションの更新追従（SHA + コメント両方を書き換える）
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 5
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 3
+
+  # npm: minor/patch をまとめて 1 PR に。Nuxt 2 / Vue 2 系は EOL のため
+  # major（Nuxt 3 / Vue 3 移行）は別途検討する前提で patch/minor のみ追従する。
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    groups:
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch
+    # サプライチェーン攻撃対策: 公開直後のバージョンは取らない。
+    # security update は cooldown を無視して即時適用される。
+    cooldown:
+      default-days: 5
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 3
