@@ -19,13 +19,16 @@
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/i18n": "^9.5.4",
+    "@nuxtjs/i18n": "^10.6.0",
     "@nuxtjs/sitemap": "^7.2.9",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.11",
-    "nuxt": "^4.0.0",
+    "nuxt": "^4.5.1",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.8.3",
     "vue-tsc": "^2.2.10"
+  },
+  "overrides": {
+    "postcss-selector-parser": ">=7.1.6"
   }
 }
